@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37806.7 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YTM2Local", "YTM2Local.csproj", "{48424B19-ED46-4911-87FC-D4937B08F467}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{48424B19-ED46-4911-87FC-D4937B08F467}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48424B19-ED46-4911-87FC-D4937B08F467}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48424B19-ED46-4911-87FC-D4937B08F467}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48424B19-ED46-4911-87FC-D4937B08F467}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A8EAFEE8-7774-4000-9A65-A9E4C1BEA715}
+	EndGlobalSection
+EndGlobal
