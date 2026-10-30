@@ -53,7 +53,7 @@ namespace YTM2Local
                 .AddEnvironmentVariables()
                 .Build();
 
-            playlistUrls = config.GetValue<string[]>("Appsettings:playlistUrls") ?? throw new InvalidOperationException("Playlist URLs not found in configuration.");
+            playlistUrls = config.GetSection("Appsettings:playlistUrls").Get<string[]>() ?? throw new InvalidOperationException("Playlist URLs not found in configuration.");
             musicDirectory = config.GetValue<string>("Appsettings:musicDirectory") ?? throw new InvalidOperationException("Music directory not found in configuration.");
             archivePath = config.GetValue<string>("Appsettings:archivePath") ?? throw new InvalidOperationException("Archive path not found in configuration.");
         }
