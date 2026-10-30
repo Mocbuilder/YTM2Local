@@ -27,7 +27,12 @@ namespace YTM2Local
                     if (string.IsNullOrWhiteSpace(playlistUrl) || playlistUrl.StartsWith('#'))
                         continue;
 
-                    await program.DownloadPlaylistAsync(playlistUrl);
+                    int result = await program.DownloadPlaylistAsync(playlistUrl);
+
+                    if (result != 0)
+                    {
+                        Console.WriteLine($"WARNING: Playlist download failed: {playlistUrl}");
+                    }
                 }
 
                 GenerateM3UPlaylists();
@@ -232,8 +237,8 @@ namespace YTM2Local
                     return;
                 }
 
-                Task stdoutTask = ReadStreamAsync(process.StandardOutput, "yt-dlp");
-                Task stderrTask = ReadStreamAsync(process.StandardError, "yt-dlp");
+                Task stdoutTask = ReadStreamAsync(process.StandardOutput, "yt-dlp OUT");
+                Task stderrTask = ReadStreamAsync(process.StandardError, "yt-dlp ERR");
 
                 await process.WaitForExitAsync();
 
