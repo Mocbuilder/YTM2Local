@@ -42,6 +42,7 @@ namespace YTM2Local
             catch (Exception ex)
             {
                 Console.WriteLine($"An error occurred: {ex.Message}");
+                Environment.ExitCode = 1;
             }
         }
 
